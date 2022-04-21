@@ -75,7 +75,7 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
             {productData.filter(d => d.imageSrc).map((product, index) => (
               <Product product={{
-                id: index, imageSrc: `${product.imageSrc}`,
+                id: index, imageSrc: `/images${product.imageSrc}`,
                 price: product['Unit Price'],
                 name: `${product['Brand Name']} ${product['Product Name']}`,
                 href: 'prod'
