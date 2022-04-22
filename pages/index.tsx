@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Input } from 'antd';
 import Image from 'next/image';
 import data from './api/data'
@@ -7,13 +7,16 @@ import Product from '../components/product'
 
 
 const Home = () => {
+  const productRef = useRef(null)
   const [productData, setProductData] = useState(data)
   const contactDetails = {
     phone: '+1 905 410 5286',
     email: 'info@tomandmercy.ca',
-    address: '633 King St E, Oshawa, ON L1H 1G3, Canada',
+    address: '304 Eddystone Avenue, North York, Toronto M3N1H7 Ontario Canada',
     'Open hours': '8am - 10pm'
   }
+
+  const executeScroll = () => productRef?.current.scrollIntoView({ behavior: "smooth", inline: "nearest" })
 
   const onSearch = (e: any) => {
     const { target: { value } } = e
@@ -24,7 +27,7 @@ const Home = () => {
     return setProductData(searchData)
   }
   return (
-    <Layout>
+    <Layout title="TOM AND MERCY" >
       <section className="  bg-orange-100   py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 px-20 pb-12">
           <div className='w-full flex sm:flex-row flex-col my-20 justify-between mb-20'>
@@ -35,7 +38,7 @@ const Home = () => {
               <span className='   font-bold text-base my-10 text-center sm:w-6/12  w-full  '>
                 Find the best grocery products from thousands of top brands at TOM AND MERCY nutrition facts, ingredients, calories, and more for millions of items.
               </span>
-              <button className=' rounded-3xl bg-orange-500 w-40 h-12 text-white   '>See Products</button>
+              <button onClick={() => executeScroll()} className=' rounded-3xl bg-orange-500 w-40 h-12 text-white   '>See Products</button>
             </div>
             <Image width='104px' height='104px' src='/svg/burger.svg' />
 
@@ -62,7 +65,7 @@ const Home = () => {
             </div>
 
           </div>
-          <div className='w-full  flex sm:flex-row flex-col justify-between items-center mb-20 '>
+          <div ref={productRef} className='w-full  flex sm:flex-row flex-col justify-between items-center mb-20 '>
             <span className=' text-center text-5xl font-bold '>
               Popular products
             </span>

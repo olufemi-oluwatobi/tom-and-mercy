@@ -1503,7 +1503,7 @@ const data = [
     "S/N": 121,
     "Brand Name": "Malta",
     "Product Name": "Maltex (Pack)",
-    imageSrc: "/malta.webp",
+    imageSrc: "/maltex.webp",
     Quantity: 5,
     "Weight (lb)": "-",
     "Weight (kg)": "330ml/Bottle",
