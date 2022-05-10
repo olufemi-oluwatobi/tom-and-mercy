@@ -65,10 +65,13 @@ const Home = () => {
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_1_zljgzi.jpg",
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_3_fcmch7.jpg",
           ].map((num) => (
-            <img
+            <Image
               alt="banner"
               key={Math.random()}
-              src={`/carousel_images/image_${num}.jpeg`}
+              width='2000px'
+              height='800px'
+              objectFit='cover'
+              src={num}
               style={{ maxHeight: "540px", maxWidth: "1200px" }}
               className=" rounded-2xl w-full object-cover "
             />
