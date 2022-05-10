@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
 
-    const categories = ['Sweet and Snacks', 'Food', 'Milk and Beverages', 'Ingredients', 'Soap and detergents', 'Skin Products']
+    const categories = ['Sweet and Snacks', 'Food', 'Milk and Beverages', 'Ingredients', 'Skin Products']
     const categoriesMenu = (
         <Menu>
             {categories.map(category => (

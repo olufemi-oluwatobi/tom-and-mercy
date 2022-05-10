@@ -65,7 +65,7 @@ const Home = () => {
               alt="banner"
               key={Math.random()}
               src={`/carousel_images/image_${num}.jpeg`}
-              style={{ maxHeight: "540px" }}
+              style={{ maxHeight: "540px", maxWidth: '1200px' }}
               className=" rounded-2xl w-full object-cover "
             />
           ))}
