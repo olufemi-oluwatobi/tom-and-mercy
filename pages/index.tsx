@@ -49,8 +49,6 @@ const Home = () => {
     return setProductData(searchData);
   };
 
-
-
   const renderBanner = () => {
     return (
       <div>
@@ -60,12 +58,18 @@ const Home = () => {
           dotPosition="left"
           autoplay
         >
-          {[1, 2, 3, 4, 5].map((num) => (
+          {[
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_2_yvsgka.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_4_lhqcxh.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_5_cfbrqz.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_1_zljgzi.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_3_fcmch7.jpg",
+          ].map((num) => (
             <img
               alt="banner"
               key={Math.random()}
               src={`/carousel_images/image_${num}.jpeg`}
-              style={{ maxHeight: "540px", maxWidth: '1200px' }}
+              style={{ maxHeight: "540px", maxWidth: "1200px" }}
               className=" rounded-2xl w-full object-cover "
             />
           ))}
@@ -76,9 +80,7 @@ const Home = () => {
 
   return (
     <Layout title="TOM AND MERCY">
-
       <section className="  bg-orange-100 sm:px-[4%] px-[2%]   py-8">
-
         <div className=" w-full mx-auto flex justify-center items-center flex-wrap pt-4 sm:px-20 px-10 pb-12">
           <div className="w-full flex sm:flex-row flex-col my-20 justify-center mb-20">
             <div className="flex flex-col justify-center  w-auto items-center ">
@@ -98,9 +100,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="flex w-full relative z-0">
-            {renderBanner()}
-          </div>
+          <div className="flex w-full relative z-0">{renderBanner()}</div>
           {/* <div className="w-full mb-40 mt-20 ">
             <Image
               className="1 rounded-[999px]   "
@@ -127,7 +127,8 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
-            {[...productData].splice(0, 39)
+            {[...productData]
+              .splice(0, 39)
               .filter((d) => d.imageSrc)
               .map((product, index) => (
                 <Product
@@ -142,9 +143,14 @@ const Home = () => {
               ))}
           </div>
 
-          <div className=' w-full flex mt-20  '>
-            <div className='sm:w-1/2 sm:flex hidden'>
-              <Image className=' mr-10 ' src='/wallpaper/shopping.svg' width={'800px'} height='800px' />
+          <div className=" w-full flex mt-20  ">
+            <div className="sm:w-1/2 sm:flex hidden">
+              <Image
+                className=" mr-10 "
+                src="/wallpaper/shopping.svg"
+                width={"800px"}
+                height="800px"
+              />
             </div>
             <div className=" sm:w-1/2 w-full    flex flex-col    items-center justify-center  ">
               <span className=" text-center text-black text-6xl font-bold   ">
@@ -152,8 +158,11 @@ const Home = () => {
               </span>
 
               <p className="w-full text-center sm:px-2 px-0 text-xl my-10 text-orange-500 font-medium ">
-                Tom & Mercy is a subsidiary of Coastwise group.It amongst other things handles thr e-commerce service of the group including sales of grocery items.
-                Shop at Tom & Mercy and you get the best African and Caribbean grocery shopping experience asking with healthy food
+                Tom & Mercy is a subsidiary of Coastwise group.It amongst other
+                things handles thr e-commerce service of the group including
+                sales of grocery items. Shop at Tom & Mercy and you get the best
+                African and Caribbean grocery shopping experience asking with
+                healthy food
               </p>
               {/* <div className=" sm:w-8/12 w-full flex sm:flex-row flex-col justify-between items-center  ">
               {Object.entries(contactDetails).map(([key, value]) => {
@@ -171,7 +180,6 @@ const Home = () => {
             </div> */}
             </div>
           </div>
-
         </div>
       </section>
     </Layout>
