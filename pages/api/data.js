@@ -1,23 +1,19 @@
+const categories = {
+  sweet_and_snacks: "sweet_and_snacks",
+  food: "food",
+  milk_and_beverages: "milk_and_beverages",
+  ingredients: "ingredients",
+  soap_and_detergents: "soap_and_detergents",
+  skin_products: "skin_products",
+};
+
 const data = [
-  {
-    "S/N": 1,
-    "Brand Name": "Tom & Mercy Best Food",
-    "Product Name": "Abacha",
-    imageSrc: "/aboniki.png",
-    Quantity: 43,
-    "Weight (lb)": "-",
-    "Weight (kg)": "100g",
-    Size: "-",
-    "Barcode No/ Product ID": 7556780086558,
-    Category: "",
-    "Exipry Date (M-Y)": "-",
-    "Unit Price": "$3.00",
-  },
   {
     "S/N": 2,
     "Brand Name": "Aboniki",
     "Product Name": "Aboniki Balm",
     Quantity: 9,
+    category: "skin_product",
     imageSrc: "/aboniki.png",
     "Weight (lb)": "-",
     "Weight (kg)": "25g",
@@ -30,6 +26,7 @@ const data = [
   {
     "S/N": 3,
     "Brand Name": "Aboniki",
+    category: "skin_product",
     imageSrc: "/aboniki-box.jpeg",
     "Product Name": "Aboniki Balm (Box)",
     Quantity: 2,
@@ -84,6 +81,7 @@ const data = [
     "S/N": 9,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Alum",
+
     Quantity: 3,
     "Weight (lb)": "-",
     "Weight (kg)": "39kg/Bag",
@@ -98,6 +96,7 @@ const data = [
     "Brand Name": "Dettol",
     imageSrc: "/dettol-pack.jpeg",
     "Product Name": "Antibacterial Soap (Box)",
+    category: "skin_product",
     Quantity: 3,
     "Weight (lb)": "-",
     "Weight (kg)": "65g/Bar",
@@ -163,6 +162,7 @@ const data = [
     "S/N": 15,
     "Brand Name": "Heinz Beans",
     "Product Name": "Baked Beans",
+    category: "food",
     imageSrc: "/heinz_baked_bean.jpeg",
     Quantity: 12,
     "Weight (lb)": "-",
@@ -190,6 +190,7 @@ const data = [
   {
     "S/N": 18,
     "Brand Name": "Okomu",
+    category: "food",
     "Product Name": "Banga Red Palm Oil",
     Quantity: 5,
     imageSrc: "/banga_red_oil.jpeg",
@@ -231,6 +232,7 @@ const data = [
     "S/N": 202,
     "Brand Name": "Dettol",
     "Product Name": "Bar Soap + Liquid (Economy Pack)",
+    category: "skin_products",
     Quantity: 36,
     "Weight (lb)": "-",
     "Weight (kg)": "-",
@@ -244,6 +246,7 @@ const data = [
     "S/N": 22,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Beans Flour",
+    category: "food",
     Quantity: 35,
     "Weight (lb)": 1.1,
     "Weight (kg)": "-",
@@ -257,6 +260,7 @@ const data = [
     "S/N": 23,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Beans Flour",
+    category: "food",
     Quantity: 68,
     "Weight (lb)": 2.2,
     "Weight (kg)": "-",
@@ -270,6 +274,7 @@ const data = [
     "S/N": 24,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Bitter Kola",
+    category: "food",
     Quantity: 14,
     "Weight (lb)": "-",
     "Weight (kg)": "-",
@@ -282,6 +287,7 @@ const data = [
   {
     "S/N": 25,
     "Brand Name": "Awa Golden",
+    category: "skin_product",
     imageSrc: "/awa_golden.webp",
     "Product Name": "Black Soap",
     Quantity: 115,
@@ -296,6 +302,7 @@ const data = [
   {
     "S/N": 26,
     "Brand Name": "Dudu Osun",
+    category: "skin_product",
     "Product Name": "Black Soap",
     imageSrc: "/dudu_osun.jpeg",
     Quantity: 24,
@@ -311,6 +318,7 @@ const data = [
     "S/N": 28,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Black Soap (Ghana)",
+    category: "skin_product",
     Quantity: 33,
     "Weight (lb)": "-",
     "Weight (kg)": "120g",
@@ -323,6 +331,7 @@ const data = [
   {
     "S/N": 30,
     "Brand Name": "Vicks",
+    category: "sweet_and_snacks",
     "Product Name": "Blue (Box)",
     Quantity: 1,
     imageSrc: "/vicks_blue_box.jpeg",
@@ -338,6 +347,7 @@ const data = [
   {
     "S/N": 32,
     "Brand Name": "Cadbury",
+    category: categories.milk_and_beverages,
     "Product Name": "Bournvita",
     Quantity: 6,
     imageSrc: "/bournvita.webp",
@@ -353,6 +363,7 @@ const data = [
   {
     "S/N": 35,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.food,
     "Product Name": "Brown Beans (Drum)",
     Quantity: 51,
     "Weight (lb)": 2.2,
@@ -366,6 +377,7 @@ const data = [
   {
     "S/N": 36,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.food,
     "Product Name": "Brown Beans (Milk)",
     Quantity: 29,
     "Weight (lb)": 2.2,
@@ -379,7 +391,9 @@ const data = [
   {
     "S/N": 37,
     "Brand Name": "McVitie's",
+    category: categories.sweet_and_snacks,
     "Product Name": "Butter Shortbread",
+    category: "sweet_and_snacks",
     Quantity: "-",
     imageSrc: "/shortbread.webp",
     "Weight (lb)": "-",
@@ -407,6 +421,7 @@ const data = [
   {
     "S/N": 39,
     "Brand Name": "Cadbury",
+    category: categories.sweet_and_snacks,
     "Product Name": "Buttermint (Box)",
     Quantity: 1,
     "Weight (lb)": "-",
@@ -446,6 +461,7 @@ const data = [
   {
     "S/N": 42,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.food,
     "Product Name": "Cassava Flour (Lafun)",
     Quantity: 8,
     "Weight (lb)": 5.5,
@@ -472,6 +488,7 @@ const data = [
   {
     "S/N": 44,
     "Brand Name": "Fun Snax",
+    category: categories.sweet_and_snacks,
     "Product Name": "Cheese Balls",
     imageSrc: "/cheese_balls.jpeg",
     Quantity: "-",
@@ -486,6 +503,7 @@ const data = [
   {
     "S/N": 45,
     "Brand Name": "Knorr",
+    category: categories.ingredients,
     "Product Name": "Chicken Seasoning Cubes (Box)",
     imageSrc: "/knorr.jpg",
     Quantity: 4,
@@ -513,6 +531,7 @@ const data = [
   {
     "S/N": 47,
     "Brand Name": "His Grace",
+    category: categories.food,
     "Product Name": "Chin Chin",
     Quantity: 96,
     imageSrc: "/his-grace.jpeg",
@@ -540,6 +559,8 @@ const data = [
   {
     "S/N": 49,
     "Brand Name": "Newbisco",
+    category: categories.sweet_and_snacks,
+
     "Product Name": "Coasters",
     imageSrc: "/coaster_biscuit.jpeg",
     Quantity: "-",
@@ -569,6 +590,7 @@ const data = [
     "Brand Name": "Sarah",
     "Product Name": "Coloured Prawn Crackers (Box)",
     imageSrc: "/prawn_crackers.jpeg",
+    category: categories.sweet_and_snacks,
     Quantity: 30,
     "Weight (lb)": "-",
     "Weight (kg)": "227g",
@@ -596,6 +618,7 @@ const data = [
     "S/N": 53,
     "Brand Name": "Dettol",
     "Product Name": "Cool Antibacterial Bar Soap",
+    category: categories.skin_products,
     Quantity: 60,
     imageSrc: "/dettol-cool.png",
     "Weight (lb)": "-",
@@ -623,6 +646,7 @@ const data = [
     "S/N": 55,
     "Brand Name": "Exeter",
     "Product Name": "Corned Beef",
+    category: categories.food,
     imageSrc: "/Exeter_Corned_Beef.png",
     Quantity: 24,
     "Weight (lb)": "-",
@@ -649,6 +673,7 @@ const data = [
   {
     "S/N": 57,
     "Brand Name": "Exeter",
+    category: categories.food,
     "Product Name": "Corned Beef (Box)",
     Quantity: 1,
     "Weight (lb)": "-",
@@ -663,6 +688,7 @@ const data = [
     "S/N": 58,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Crayfish (Grounded)",
+    category: categories.food,
     Quantity: 9,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -676,6 +702,7 @@ const data = [
     "S/N": 59,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Crayfish (Grounded)",
+    category: categories.food,
     Quantity: 127,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -689,6 +716,7 @@ const data = [
     "S/N": 60,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Crayfish (Grounded)",
+    category: categories.food,
     Quantity: 145,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -701,6 +729,7 @@ const data = [
   {
     "S/N": 61,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.food,
     "Product Name": "Crayfish (Ungrounded)",
     Quantity: 55,
     "Weight (lb)": "-",
@@ -714,6 +743,7 @@ const data = [
   {
     "S/N": 62,
     "Brand Name": "Beloxxi",
+    category: categories.sweet_and_snacks,
     "Product Name": "Cream Crackers",
     imageSrc: "/beloxxi.jpeg",
     Quantity: "-",
@@ -728,6 +758,7 @@ const data = [
   {
     "S/N": 63,
     "Brand Name": "Kemps",
+    category: categories.sweet_and_snacks,
     imageSrc: "/kemps.png",
     "Product Name": "Cream Creackers",
     Quantity: "-",
@@ -742,6 +773,7 @@ const data = [
   {
     "S/N": 64,
     "Brand Name": "Ducros",
+    category: categories.ingredients,
     "Product Name": "Curry Powder",
     Quantity: 132,
     imageSrc: "/ducros_curry.jpeg",
@@ -756,6 +788,7 @@ const data = [
   {
     "S/N": 66,
     "Brand Name": "Ducros",
+    category: categories.ingredients,
     "Product Name": "Curry Powder (Box)",
     Quantity: 3,
     imageSrc: "/ducros_curry.jpeg",
@@ -771,6 +804,7 @@ const data = [
     "S/N": 65,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Curry Powder",
+    category: categories.ingredients,
     Quantity: 59,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -798,6 +832,7 @@ const data = [
   {
     "S/N": 68,
     "Brand Name": "Checkers",
+    category: categories.food,
     "Product Name": "Custard Powder",
     imageSrc: "/checkers_custard.jpeg",
     Quantity: 34,
@@ -812,6 +847,7 @@ const data = [
   {
     "S/N": 69,
     "Brand Name": "Lady B",
+    category: categories.ingredients,
     "Product Name": "Custard Powder",
     Quantity: 4,
     imageSrc: "/lady_b.jpeg",
@@ -840,6 +876,7 @@ const data = [
   {
     "S/N": 72,
     "Brand Name": "Checkers",
+    category: categories.food,
     "Product Name": "Custard Powder (Banana Flavour)",
     Quantity: 3,
     imageSrc: "/checkers-custard.jpeg",
@@ -893,6 +930,7 @@ const data = [
   {
     "S/N": 76,
     "Brand Name": "McVitie's",
+    category: categories.sweet_and_snacks,
     "Product Name": "Digestive",
     imageSrc: "/digestive.jpeg",
     Quantity: "-",
@@ -909,6 +947,7 @@ const data = [
     "Brand Name": "Ducros",
     "Product Name": "Dried Thyme",
     imageSrc: "/thyme-ducros.jpeg",
+    category: categories.ingredients,
     Quantity: 144,
     "Weight (lb)": "-",
     "Weight (kg)": "10g/Bottle",
@@ -921,6 +960,7 @@ const data = [
   {
     "S/N": 78,
     "Brand Name": "Ducros",
+    category: categories.ingredients,
     "Product Name": "Dried Thyme (Box)",
     imageSrc: "/thyme-box.jpeg",
     Quantity: 2,
@@ -935,6 +975,7 @@ const data = [
   {
     "S/N": 79,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.ingredients,
     "Product Name": "Dry Bitter Leaves",
     Quantity: 52,
     "Weight (lb)": "-",
@@ -949,6 +990,8 @@ const data = [
     "S/N": 80,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Dry Ewedu Leaves",
+    category: categories.ingredients,
+
     Quantity: 25,
     "Weight (lb)": "-",
     "Weight (kg)": "60g",
@@ -1026,6 +1069,7 @@ const data = [
   {
     "S/N": 86,
     "Brand Name": "Spice Supreme",
+    category: categories.ingredients,
     "Product Name": "Fried Rice Spice",
     Quantity: 12,
     "Weight (lb)": "-",
@@ -1040,6 +1084,7 @@ const data = [
   {
     "S/N": 87,
     "Brand Name": "Maliban",
+    category: categories.sweet_and_snacks,
     "Product Name": "Gem Sweet Biscuits",
     Quantity: "-",
     imageSrc: "/gem_sweet_biscuit.webp",
@@ -1068,6 +1113,7 @@ const data = [
   {
     "S/N": 89,
     "Brand Name": "Grain Process Enterprises Ltd",
+    category: categories.food,
     "Product Name": "Gold King Wheatlets",
     Quantity: 3,
     "Weight (lb)": 22,
@@ -1082,6 +1128,7 @@ const data = [
   {
     "S/N": 90,
     "Brand Name": "Nestle",
+    category: categories.food,
     "Product Name": "Golden Morn",
     Quantity: 9,
     imageSrc: "/Nestle-Golden-Morn-1-Kg-Bag-1.jpg.webp",
@@ -1109,6 +1156,7 @@ const data = [
   {
     "S/N": 92,
     "Brand Name": "Damatol",
+    category: categories.skin_products,
     "Product Name": "Hair, Scalp, Skin Treatment",
     Quantity: 6,
     imageSrc: "/damatol.jpg",
@@ -1214,6 +1262,7 @@ const data = [
   {
     "S/N": 100,
     "Brand Name": "Indomie",
+    category: categories.food,
     "Product Name": "Indomie Chicken Flavour",
     Quantity: 4,
     imageSrc: "/71pbxHy0E8L._AC_SL1500_.jpg",
@@ -1227,6 +1276,7 @@ const data = [
   },
   {
     "S/N": 101,
+    category: categories.food,
     "Brand Name": "Indomie",
     "Product Name": "Indomie Onion Chicken Flavour",
     Quantity: 5,
@@ -1269,6 +1319,7 @@ const data = [
   {
     "S/N": 104,
     "Brand Name": "Jet",
+    category: categories.skin_products,
     imageSrc: "/jet_cream.png",
     "Product Name": "Jet Cream",
     Quantity: 6,
@@ -1283,6 +1334,7 @@ const data = [
   {
     "S/N": 105,
     "Brand Name": "Supreme Spice",
+    category: categories.ingredients,
     imageSrc: "/jollof_rice_spice.jpeg",
     "Product Name": "Jollof Rice Spice",
     Quantity: 12,
@@ -1296,6 +1348,7 @@ const data = [
   },
   {
     "S/N": 106,
+    category: categories.food,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Jollof Rice Spice",
     Quantity: 96,
@@ -1310,6 +1363,7 @@ const data = [
   {
     "S/N": 107,
     "Brand Name": "Ademoy",
+    category: categories.ingredients,
     imageSrc: "/killishi.webp",
     "Product Name": "Kilishi",
     Quantity: 18,
@@ -1323,6 +1377,7 @@ const data = [
   },
   {
     "S/N": 108,
+    category: categories.ingredients,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Koun",
     Quantity: 11,
@@ -1351,6 +1406,7 @@ const data = [
   {
     "S/N": 110,
     "Brand Name": "Krizpi",
+    category: categories.food,
     "Product Name": "Kuli Kuli",
     Quantity: 99,
     imageSrc: "/krizpi.png",
@@ -1364,6 +1420,7 @@ const data = [
   },
   {
     "S/N": 111,
+    category: categories.sweet_and_snacks,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Kuli Kuli",
     Quantity: 3,
@@ -1392,6 +1449,7 @@ const data = [
   {
     "S/N": 113,
     "Brand Name": "Vicks",
+    category: categories.sweet_and_snacks,
     "Product Name": "Lemon Plus (Box)",
     Quantity: 2,
     imageSrc: "/lemon_plus.webp",
@@ -1421,6 +1479,7 @@ const data = [
     "S/N": 115,
     "Brand Name": "Dettol",
     "Product Name": "Liquid Antiseptic",
+    category: categories.soap_and_detergents,
     imageSrc: "/dettol-antiseptic-liquid-1l.jpeg",
     Quantity: 22,
     "Weight (lb)": "-",
@@ -1435,6 +1494,7 @@ const data = [
     "S/N": 116,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Local Sponge",
+    category: categories.ingredients,
     Quantity: 30,
     "Weight (lb)": "-",
     "Weight (kg)": "-",
@@ -1448,6 +1508,7 @@ const data = [
     "S/N": 117,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Locus Bean",
+    category: categories.ingredients,
     Quantity: 77,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -1488,6 +1549,7 @@ const data = [
   {
     "S/N": 120,
     "Brand Name": "Maggi",
+    category: categories.ingredients,
     imageSrc: "/maggi.webp",
     "Product Name": "Maggi Star Seasoning (Pack)",
     Quantity: 20,
@@ -1502,6 +1564,7 @@ const data = [
   {
     "S/N": 121,
     "Brand Name": "Malta",
+    category: categories.milk_and_beverages,
     "Product Name": "Maltex (Pack)",
     imageSrc: "/maltex.webp",
     Quantity: 5,
@@ -1516,6 +1579,8 @@ const data = [
   {
     "S/N": 122,
     "Brand Name": "Tetmosol",
+    category: categories.skin_products,
+
     imageSrc: "/tetmosol.webp",
     "Product Name": "Medicated Soap",
     Quantity: 72,
@@ -1531,6 +1596,8 @@ const data = [
     "S/N": 123,
     "Brand Name": "Tura",
     imageSrc: "/tura.jpg",
+    category: categories.skin_products,
+
     "Product Name": "Medicated Soap",
     Quantity: 48,
     "Weight (lb)": "-",
@@ -1544,6 +1611,8 @@ const data = [
   {
     "S/N": 124,
     "Brand Name": "Tetmosol",
+    category: categories.skin_products,
+
     imageSrc: "/tetmosol_pack.jpg",
     "Product Name": "Medicated Soap (Box)",
     Quantity: 2,
@@ -1558,6 +1627,7 @@ const data = [
   {
     "S/N": 125,
     "Brand Name": "Peak",
+    category: categories.milk_and_beverages,
     imageSrc: "/peak_milk.jpeg",
     "Product Name": "Milk",
     Quantity: 12,
@@ -1611,6 +1681,7 @@ const data = [
   {
     "S/N": 129,
     "Brand Name": "Nestle",
+    category: categories.milk_and_beverages,
     "Product Name": "Milo",
     imageSrc: "/milo.jpeg",
     Quantity: 10,
@@ -1652,6 +1723,8 @@ const data = [
   {
     "S/N": 132,
     "Brand Name": "Grain Process Enterprises Ltd",
+    category: categories.food,
+
     "Product Name": "Monarch Wheatlets",
     imageSrc: "/Wheatlets-monarch.jpeg",
     Quantity: 3,
@@ -1666,6 +1739,8 @@ const data = [
   {
     "S/N": 133,
     "Brand Name": "Morgan's",
+    category: categories.skin_products,
+
     imageSrc: "/morgans_pormade.webp",
     "Product Name": "Morgan's Pomade",
     Quantity: 12,
@@ -1680,6 +1755,8 @@ const data = [
   {
     "S/N": 134,
     "Brand Name": "Nestle",
+    category: categories.milk_and_beverages,
+
     "Product Name": "Nido Milk",
     imageSrc: "/nido_milk.jpeg",
     Quantity: 12,
@@ -1733,6 +1810,7 @@ const data = [
   {
     "S/N": 138,
     "Brand Name": "Tahitian",
+    category: categories.milk_and_beverages,
     "Product Name": "Noni",
     imageSrc: "/tahitian_noni.png",
     Quantity: 4,
@@ -1747,6 +1825,8 @@ const data = [
   {
     "S/N": 139,
     "Brand Name": "Haansbro",
+    category: categories.sweet_and_snacks,
+
     "Product Name": "Noreos",
     Quantity: "-",
     imageSrc: "/noreos.jpeg",
@@ -1761,6 +1841,8 @@ const data = [
   {
     "S/N": 140,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.ingredients,
+
     "Product Name": "Nutmeg (Grounded)",
     Quantity: 25,
     "Weight (lb)": "-",
@@ -1774,6 +1856,8 @@ const data = [
   {
     "S/N": 141,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.milk_and_beverages,
+
     "Product Name": "Nutmeg (Ungrounded)",
     Quantity: 11,
     "Weight (lb)": "-",
@@ -1852,6 +1936,7 @@ const data = [
   {
     "S/N": 147,
     "Brand Name": "Tasty Pot",
+    category: categories.food,
     "Product Name": "Ogi (Pap) Guinea Corn",
     Quantity: 15,
     imageSrc: "/tasty_pot.jpeg",
@@ -1892,6 +1977,8 @@ const data = [
   {
     "S/N": 150,
     "Brand Name": "Goya",
+    category: categories.skin_products,
+
     "Product Name": "Olive Oil",
     imageSrc: "/goya.webp",
     Quantity: 72,
@@ -1918,6 +2005,8 @@ const data = [
   // },
   {
     "S/N": 152,
+    category: categories.ingredients,
+
     "Brand Name": "Onga",
     "Product Name": "Onga Classic",
     imageSrc: "/onga.png",
@@ -1946,6 +2035,7 @@ const data = [
   {
     "S/N": 154,
     "Brand Name": "Onga",
+    category: categories.ingredients,
     "Product Name": "Onga Stew (Box)",
     Quantity: 2,
     imageSrc: "/onga_stew.png",
@@ -1972,6 +2062,7 @@ const data = [
   // },
   {
     "S/N": 156,
+    category: categories.skin_products,
     "Brand Name": "Dettol",
     "Product Name": "Original Antibacterial Bar Soap",
     Quantity: 12,
@@ -2000,6 +2091,7 @@ const data = [
   {
     "S/N": 158,
     "Brand Name": "Ovaltine",
+    category: categories.milk_and_beverages,
     "Product Name": "Ovaltine",
     Quantity: 11,
     imageSrc: "/ovaltine.jpeg",
@@ -2091,6 +2183,8 @@ const data = [
   },
   {
     "S/N": 165,
+    category: categories.food,
+
     "Brand Name": "Parle",
     "Product Name": "Parle G",
     Quantity: "-",
@@ -2133,6 +2227,8 @@ const data = [
     "S/N": 168,
     "Brand Name": "Timtem African Foods",
     "Product Name": "Peeled Beans",
+    category: categories.food,
+
     imageSrc: "/timtem-peeled-beans-scaled.webp",
     Quantity: 4,
     "Weight (lb)": 2,
@@ -2159,6 +2255,8 @@ const data = [
   {
     "S/N": 170,
     "Brand Name": "Tom & Mercy Best Food",
+    category: categories.ingredients,
+
     "Product Name": "Pepper Soup Spice",
     Quantity: 19,
     "Weight (lb)": "-",
@@ -2173,6 +2271,8 @@ const data = [
     "S/N": 171,
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Pepper Soup Spice",
+    category: categories.ingredients,
+
     Quantity: 48,
     "Weight (lb)": "-",
     "Weight (kg)": "100g",
@@ -2186,6 +2286,8 @@ const data = [
     "S/N": 172,
     "Brand Name": "Vaseline",
     "Product Name": "Petroleum Jelly",
+    category: categories.skin_products,
+
     Quantity: 36,
     imageSrc: "/vaseline.jpg",
     "Weight (lb)": "-",
@@ -2201,6 +2303,8 @@ const data = [
     "Brand Name": "Tom & Mercy Best Food",
     "Product Name": "Plantain Flour",
     Quantity: 19,
+    category: categories.milk_and_beverages,
+
     "Weight (lb)": 2.2,
     "Weight (kg)": "-",
     Size: "-",
@@ -2213,6 +2317,8 @@ const data = [
     "S/N": 174,
     "Brand Name": "Stella",
     "Product Name": "Pomade",
+    category: categories.skin_products,
+
     Quantity: 6,
     imageSrc: "/stella-pomade.jpg",
     "Weight (lb)": "-",

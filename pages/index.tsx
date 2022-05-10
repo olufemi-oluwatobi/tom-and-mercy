@@ -1,94 +1,180 @@
-import React, { useRef, useState } from 'react';
-import { Input } from 'antd';
-import Image from 'next/image';
-import data from './api/data'
-import Layout from '../components/Layout';
-import Product from '../components/product'
+import React, { useRef, useState } from "react";
+import { Input, Carousel } from "antd";
+import Link from "next/link";
+import Image from "next/image";
+import data from "./api/data";
+import Layout from "../components/Layout";
+import Product from "../components/product";
 
+const CAROUSEL_IMAGE_URLS = [
+  {
+    image:
+      "https://res.cloudinary.com/digift/image/upload/v1644515778/DSP_1_tcwjl1.jpg",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/digift/image/upload/v1644515764/DSP_3_ze96jd.jpg",
+  },
+];
 
 const Home = () => {
-  const productRef = useRef(null)
-  const [productData, setProductData] = useState(data)
-  const contactDetails = {
-    phone: '+1 905 410 5286',
-    email: 'info@tomandmercy.ca',
-    address: '304 Eddystone Avenue, North York, Toronto M3N1H7 Ontario Canada',
-    'Open hours': '8am - 10pm'
-  }
+  const productRef = useRef(null);
 
-  const executeScroll = () => productRef?.current.scrollIntoView({ behavior: "smooth", inline: "nearest" })
+  const [productData, setProductData] = useState(data);
+  const contactDetails = {
+    phone: "+1 905 410 5286",
+    email: "info@tomandmercy.ca",
+    address: "304 Eddystone Avenue, North York, Toronto M3N1H7 Ontario Canada",
+    "Open hours": "8am - 10pm",
+  };
+
+  const executeScroll = () =>
+    productRef?.current.scrollIntoView({
+      behavior: "smooth",
+      inline: "nearest",
+    });
 
   const onSearch = (e: any) => {
-    const { target: { value } } = e
+    const {
+      target: { value },
+    } = e;
     if (!value || !value?.length) {
-      return setProductData(data)
+      return setProductData(data);
     }
-    let searchData = data?.filter(o => o['Brand Name'].toLowerCase().includes(value) || o['Product Name'].toLowerCase().includes(value));
-    return setProductData(searchData)
-  }
+    let searchData = data?.filter(
+      (o) =>
+        o["Brand Name"].toLowerCase().includes(value) ||
+        o["Product Name"].toLowerCase().includes(value)
+    );
+    return setProductData(searchData);
+  };
+
+
+
+  const renderBanner = () => {
+    return (
+      <div>
+        <Carousel
+          className="w-full rounded-2xl mt-10 sm:flex hidden "
+          dots={{ className: "tw-text-black" }}
+          dotPosition="left"
+          autoplay
+        >
+          {[1, 2, 3, 4, 5].map((num) => (
+            <img
+              alt="banner"
+              key={Math.random()}
+              src={`/carousel_images/image_${num}.jpeg`}
+              style={{ maxHeight: "540px" }}
+              className=" rounded-2xl w-full object-cover "
+            />
+          ))}
+        </Carousel>
+      </div>
+    );
+  };
+
   return (
-    <Layout title="TOM AND MERCY" >
-      <section className="  bg-orange-100   py-8">
-        <div className="container mx-auto flex items-center flex-wrap pt-4 px-20 pb-12">
-          <div className='w-full flex sm:flex-row flex-col my-20 justify-between mb-20'>
-            <Image width='104px' height='104px' src='/svg/pizza.svg' />
-            <div className='flex flex-col justify-center  w-auto items-center '>
-              <span className=' font-bold sm:text-8xl text-[15vw] leading-none   sm:w-8/12 w-full  text-center  '>Shop for  African grocery
-              </span>
-              <span className='   font-bold text-base my-10 text-center sm:w-6/12  w-full  '>
-                Find the best grocery products from thousands of top brands at TOM AND MERCY nutrition facts, ingredients, calories, and more for millions of items.
-              </span>
-              <button onClick={() => executeScroll()} className=' rounded-3xl bg-orange-500 w-40 h-12 text-white   '>See Products</button>
-            </div>
-            <Image width='104px' height='104px' src='/svg/burger.svg' />
+    <Layout title="TOM AND MERCY">
 
-          </div>
-          <div className='w-full mb-40 mt-20 '>
-            <Image className='1 rounded-[999px]   ' width='1500px' height='800px' src='https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80' />
-          </div>
-          <div className=' border-solid border-t-2 border-b-2  w-full flex flex-col border-gray-300 mb-40 py-32 items-center justify-center  '>
-            <span className=' text-center text-black text-6xl font-bold   '>
-              About Us
-            </span>
-            <span className='sm:w-6/12 w-full text-center my-10 text-gray-200 font-medium '>
-              Shop at TOM AND MERCY and you get the best African  grocery shopping experience along with healthy food. We stock more than 240,000 great-tasting everyday items and more than 50 fresh produce varieties so you can eat well, every day. We’re also known to offer special seasonal products at unbeatable prices.
-            </span>
-            <div className=' sm:w-8/12 w-full flex sm:flex-row flex-col justify-between items-center  '>
-              {Object.entries(contactDetails).map(([key, value]) => {
-                return (
-                  <div className='flex flex-col  '>
-                    <span className=' self-center capitalize mb-5 font-medium text-orange-500 '>{key}</span>
-                    <span className=' w-48 text-center font-medium text-orange-500'>{value}</span>
-                  </div>
-                )
-              })}
-            </div>
+      <section className="  bg-orange-100 sm:px-[4%] px-[2%]   py-8">
 
+        <div className=" w-full mx-auto flex justify-center items-center flex-wrap pt-4 sm:px-20 px-10 pb-12">
+          <div className="w-full flex sm:flex-row flex-col my-20 justify-center mb-20">
+            <div className="flex flex-col justify-center  w-auto items-center ">
+              <span className=" font-bold sm:text-8xl text-[15vw] leading-none   sm:w-8/12 w-full  text-center  ">
+                Shop for African Grocery
+              </span>
+              <span className="   font-bold text-base my-10 text-center sm:w-6/12  w-full  ">
+                Find the best grocery products from thousands of top brands at
+                TOM AND MERCY nutrition facts, ingredients, calories, and more
+                for millions of items.
+              </span>
+              <button
+                onClick={() => executeScroll()}
+                className=" rounded-3xl bg-orange-500 w-40 h-12 text-white   "
+              >
+                See Products
+              </button>
+            </div>
           </div>
-          <div ref={productRef} className='w-full  flex sm:flex-row flex-col justify-between items-center mb-20 '>
-            <span className=' text-center text-5xl font-bold '>
+          <div className="flex w-full relative z-0">
+            {renderBanner()}
+          </div>
+          {/* <div className="w-full mb-40 mt-20 ">
+            <Image
+              className="1 rounded-[999px]   "
+              width="1500px"
+              height="800px"
+              src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80"
+            />
+          </div> */}
+
+          <div
+            ref={productRef}
+            className="w-full mt-20  flex sm:flex-row flex-col justify-between items-center mb-20 "
+          >
+            <span className=" text-center text-5xl font-bold ">
               Popular products
             </span>
-            <div className=' w-[fit-content] sm:mt-0 mt-6 h-full flex justify-center items-center bg-white p-2 '>
-              <Input.Search onChange={onSearch} placeholder='Search product' className='  ' />
+            <div className=" w-[fit-content] sm:mt-0 mt-6 h-full flex justify-center items-center bg-white p-2 ">
+              <Input.Search
+                onChange={onSearch}
+                placeholder="Search product"
+                className="  "
+              />
             </div>
           </div>
 
-
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
-            {productData.filter(d => d.imageSrc).map((product, index) => (
-              <Product product={{
-                id: index, imageSrc: `/images${product.imageSrc}`,
-                price: product['Unit Price'],
-                name: `${product['Brand Name']} ${product['Product Name']}`,
-                href: 'prod'
-              }} />
-            ))}
+            {[...productData].splice(0, 39)
+              .filter((d) => d.imageSrc)
+              .map((product, index) => (
+                <Product
+                  product={{
+                    id: index,
+                    imageSrc: `/images${product.imageSrc}`,
+                    price: product["Unit Price"],
+                    name: `${product["Brand Name"]} ${product["Product Name"]}`,
+                    href: "prod",
+                  }}
+                />
+              ))}
           </div>
+
+          <div className=' w-full flex mt-20  '>
+            <div className='sm:w-1/2 sm:flex hidden'>
+              <Image className=' mr-10 ' src='/wallpaper/shopping.svg' width={'800px'} height='800px' />
+            </div>
+            <div className=" sm:w-1/2 w-full    flex flex-col    items-center justify-center  ">
+              <span className=" text-center text-black text-6xl font-bold   ">
+                About Us
+              </span>
+
+              <p className="w-full text-center sm:px-2 px-0 text-xl my-10 text-orange-500 font-medium ">
+                Tom & Mercy is a subsidiary of Coastwise group.It amongst other things handles thr e-commerce service of the group including sales of grocery items.
+                Shop at Tom & Mercy and you get the best African and Caribbean grocery shopping experience asking with healthy food
+              </p>
+              {/* <div className=" sm:w-8/12 w-full flex sm:flex-row flex-col justify-between items-center  ">
+              {Object.entries(contactDetails).map(([key, value]) => {
+                return (
+                  <div className="flex flex-col  ">
+                    <span className=" self-center capitalize mb-5 font-medium text-orange-500 ">
+                      {key}
+                    </span>
+                    <span className=" w-48 text-center font-medium text-orange-500">
+                      {value}
+                    </span>
+                  </div>
+                );
+              })}
+            </div> */}
+            </div>
+          </div>
+
         </div>
       </section>
     </Layout>
-  )
-
-}
+  );
+};
 export default Home;

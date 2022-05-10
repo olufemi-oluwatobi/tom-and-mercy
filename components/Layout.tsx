@@ -7,10 +7,12 @@ import Head from 'next/head'
 type Props = {
   children?: ReactNode
   title?: string
+  showFooter?: boolean
+  className?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div className='w-screen font-inter bg-orange-100 '>
+const Layout = ({ children, className, showFooter = true, title = 'This is the default title' }: Props) => (
+  <div className={`w-screen font-inter bg-orange-100 ${className} `}>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -18,7 +20,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <Header />
     <main>{children}</main>
-    <Footer />
+    {showFooter && <Footer />}
   </div>
 )
 

@@ -62,10 +62,12 @@ const Footer = () => {
     }]
     return (
         <Wrapper
-            style={{ background: "#44b5e3" }}
-            className="h-fit-content justify-center items-center flex flex-col pt-32  w-full  py-20"
+            className="h-fit-content px-[8%] flex justify-between items-center    w-full  py-5"
         >
-            <span className=" sm:px-0 px-10% text-2xl font-bold   text-black ">
+            <div>TOM AND MERCY
+            </div>
+            <div>(c) 2022</div>
+            {/* <span className=" sm:px-0 px-10% text-2xl font-bold   text-black ">
                 TOM AND MERCY
             </span>
             <div
@@ -115,10 +117,10 @@ const Footer = () => {
                         placeholder="join our waiting list"
                         className="w-full h-14 bg-transparent text-black    border px-3.5 mt-5  rounded-md border-solid border-black "
                     />
-                    <button className=' mt-3 rounded-3xl bg-orange-500 w-40 h-12 text-white   '>See Products</button>
+                    <button className=' mt-3 rounded-3xl bg-orange-500 w-40 h-12 text-white   '>Send Message</button>
 
                 </div>
-            </div>
+            </div> */}
         </Wrapper>
     );
 };
