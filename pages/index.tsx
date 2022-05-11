@@ -59,11 +59,11 @@ const Home = () => {
           autoplay
         >
           {[
-            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_2_yvsgka.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652304534/WhatsApp_Image_2022-04-14_at_5.27.25_PM_4_ztysql.jpg",
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_4_lhqcxh.jpg",
-            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_5_cfbrqz.jpg",
-            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_1_zljgzi.jpg",
-            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_3_fcmch7.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652304534/WhatsApp_Image_2022-04-14_at_5.27.25_PM_4_ztysql.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652304525/WhatsApp_Image_2022-04-14_at_5.27.25_PM_3_shzav2.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652304525/WhatsApp_Image_2022-04-14_at_5.27.25_PM_3_shzav2.jpg",
           ].map((num) => (
             <Image
               alt="banner"
