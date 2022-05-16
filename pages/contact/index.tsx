@@ -67,7 +67,7 @@ const Home = () => {
         link: 'https://www.instagram.com/tom_and_mercy/'
     }, {
         icon: '/svg/facebook.svg',
-        link: '/'
+        link: 'https://www.facebook.com/Tom-Mercy-Grocery-102438249142904'
     }]
 
     return (
