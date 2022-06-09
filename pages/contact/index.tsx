@@ -54,7 +54,7 @@ const Wrapper = styled.div`
 
 const Home = () => {
     const contactDetails = {
-        phone: "+1 905 410 5286",
+        phone: "+1 289 830 7923",
         email: "info@tomandmercy.ca",
     };
 
@@ -74,12 +74,7 @@ const Home = () => {
         <Wrapper>
             <Layout className=' h-screen sm:overflow-hidden overflow-auto ' showFooter={false} title="TOM AND MERCY">
                 <section className=" w-screen h-screen flex justify-between   bg-orange-100 px-[8%] mt-10 ">
-                    <div className=' w-2/3 flex  '>
-                        <Image width='800px' height='600px' src='/wallpaper/super_market.svg' />
-                        {/* <img className=' w-[30%] rounded-2xl object-cover  min-h-[650px]  max-h-[850px] ' src='https://images.unsplash.com/photo-1609842947419-ba4f04d5d60f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80' />
-                        <img className=' w-[30%]   rounded-2xl ml-20  object-cover  min-h-[650px]  max-h-[850px] ' src='https://images.unsplash.com/photo-1528733918455-5a59687cedf0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80' /> */}
 
-                    </div>
                     <div className='flex flex-col w-1/3'>
                         <span className=' text-3xl font-bold py-10  text-gray-800   '>Let's help you solve all your grocery challenges</span>
                         <div className="  w-full mb-10 flex sm:flex-row flex-col justify-between items-start  ">
@@ -96,6 +91,17 @@ const Home = () => {
                                 );
                             })}
                         </div>
+                        <div className="  w-full mb-10 flex sm:flex-row flex-col justify-between items-start  ">
+                            <div className="flex flex-col items-start  ">
+                                <span className="  capitalize font-medium mb-2 text-gray-800  ">
+                                    Address:
+                                </span>
+                                <span className=" font-medium text-orange-500">
+                                    Office/Shop address was not included: Address is 308 Eddystone Avenue North York, Toronto, ON M3N1H7, Canada
+                                </span>
+                            </div>
+                        </div>
+
                         <div className='flex my-2 w-full'>
                             {socialMedia.map(sm => (
                                 <div className=' mr-5 cursor-pointer '>
@@ -122,9 +128,14 @@ const Home = () => {
                         <button className=' mt-5 rounded-3xl bg-black  w-40 h-12 text-white   '>See Message</button>
 
                     </div>
-                    <div>
+                    <div className=' flex  '>
+                        <Image width='800px' height='600px' src='/wallpaper/super_market.svg' />
+                        {/* <img className=' w-[30%] rounded-2xl object-cover  min-h-[650px]  max-h-[850px] ' src='https://images.unsplash.com/photo-1609842947419-ba4f04d5d60f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80' />
+                        <img className=' w-[30%]   rounded-2xl ml-20  object-cover  min-h-[650px]  max-h-[850px] ' src='https://images.unsplash.com/photo-1528733918455-5a59687cedf0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80' /> */}
 
                     </div>
+
+
                 </section>
             </Layout>
         </Wrapper>

@@ -26,7 +26,7 @@ const Home = () => {
         sweet_and_snacks: "Sweet and Snacks",
         food: "Food",
         milk_and_beverages: "Milk and Beverages",
-        ingredients: "Ingredients",
+        ingredients: "Seasonings",
         soap_and_detergents: "Soap and Detergents",
         skin_products: "Skin Products",
     };
@@ -39,7 +39,7 @@ const Home = () => {
         food: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
         milk_and_beverages:
             "https://images.unsplash.com/photo-1579895989361-4c83c6493681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
-        ingredients:
+        seasoning:
             "https://images.unsplash.com/photo-1606914501449-5a96b6ce24ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
         soap_and_detergents:
             "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",

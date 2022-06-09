@@ -66,7 +66,7 @@ const Footer = () => {
         >
             <div>TOM AND MERCY
             </div>
-            <div>(c) 2022</div>
+            <div>2022 (c) </div>
             {/* <span className=" sm:px-0 px-10% text-2xl font-bold   text-black ">
                 TOM AND MERCY
             </span>

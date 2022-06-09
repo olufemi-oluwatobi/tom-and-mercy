@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
 
-    const categories = ['Sweet and Snacks', 'Food', 'Milk and Beverages', 'Ingredients', 'Skin Products']
+    const categories = ['Sweet and Snacks', 'Food', 'Milk and Beverages', 'Seasonings', 'Skin Products']
     const categoriesMenu = (
         <Menu>
             {categories.map(category => (
@@ -45,7 +45,7 @@ const Header = () => {
                         >
                             <div className="flex cursor-pointer items-center tracking-wide no-underline hover:no-underline font-bold text-gray-900 text-xl "
                             >
-                                <Image height="30px" width="30px" src="/favicon.png" />
+                                <Image height="50px" width="50px" src="/favicon.png" />
                                 <span className=" ml-4">TOM AND MERCY</span>
                             </div>
                         </Link>
@@ -58,7 +58,7 @@ const Header = () => {
                             <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                                 <li className=' w-[fit-content] '>
                                     <Dropdown overlay={categoriesMenu}>
-                                        <span className='font-bold cursor-pointer mx-5'>Categories</span>
+                                        <span className='font-bold cursor-pointer mx-5'>Product List</span>
                                     </Dropdown>
                                 </li>
                                 <li>

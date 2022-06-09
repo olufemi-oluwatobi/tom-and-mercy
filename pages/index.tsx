@@ -6,16 +6,7 @@ import data from "./api/data";
 import Layout from "../components/Layout";
 import Product from "../components/product";
 
-const CAROUSEL_IMAGE_URLS = [
-  {
-    image:
-      "https://res.cloudinary.com/digift/image/upload/v1644515778/DSP_1_tcwjl1.jpg",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/digift/image/upload/v1644515764/DSP_3_ze96jd.jpg",
-  },
-];
+
 
 const Home = () => {
   const productRef = useRef(null);
@@ -59,7 +50,7 @@ const Home = () => {
           autoplay
         >
           {[
-            "https://res.cloudinary.com/drda29q8x/image/upload/v1652304534/WhatsApp_Image_2022-04-14_at_5.27.25_PM_4_ztysql.jpg",
+            "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_5_cfbrqz.jpg",
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652217828/image_4_lhqcxh.jpg",
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652304534/WhatsApp_Image_2022-04-14_at_5.27.25_PM_4_ztysql.jpg",
             "https://res.cloudinary.com/drda29q8x/image/upload/v1652304525/WhatsApp_Image_2022-04-14_at_5.27.25_PM_3_shzav2.jpg",
