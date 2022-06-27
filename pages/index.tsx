@@ -151,13 +151,15 @@ const Home = () => {
                 About Us
               </span>
 
-              <p className="w-full text-center sm:px-2 px-0 text-xl my-10 text-orange-500 font-medium ">
-                Tom & Mercy is a subsidiary of Coastwise group.It amongst other
-                things handles thr e-commerce service of the group including
+              <p className="w-full text-center sm:px-2 px-0 text-xl mt-10 text-orange-500 font-medium ">
+                Tom & Mercy is a subsidiary of Coastwise group. It, amongst other
+                things, handles the e-commerce service of the group including
                 sales of grocery items. Shop at Tom & Mercy and you get the best
                 African and Caribbean grocery shopping experience asking with
                 healthy food
               </p>
+              <span className="w-full text-center sm:px-2 px-0 text-md my-5 text-red-500 font-medium ">
+                Our Store is open from 9am to 9pm on Mondays to Saturdays and 2pm to 5pm on Sundays</span>
               {/* <div className=" sm:w-8/12 w-full flex sm:flex-row flex-col justify-between items-center  ">
               {Object.entries(contactDetails).map(([key, value]) => {
                 return (
